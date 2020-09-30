@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+::selection {
+    background: #ee4fc9;
+    text-shadow: none
+}
+
+a {
+    color: #03293b;
+    text-decoration: none;
+    outline: 0
+}
+
+a:hover {
+    color: #005580
+}
+
+a img {
+    border: none
+}
+
+img {
+    max-width: 100%
+}
+
+html {
+    font-size: 100%
+}
+
+body {
+    padding: 10%;
+    font: 300 1.25em/1.6 monospace;
+    background: rgb(8, 8, 8);
+    color: #000;
+}
+
+h1 {
+    font-family: "Helvetica Neue", sans-serif;
+    line-height: 1;
+    font-weight: 900;
+    margin-bottom: 1em;
+    font-size: xx-large;
+}
+
+.game {
+    padding: 2em;
+    background: rgb(226, 226, 219);
+    animation-name: example;
+  animation-duration: 4s;
+}
+@keyframes example {
+    from {background-color: rgb(226, 226, 219);}
+    to {background-color: rgb(168, 253, 242);}
+  }

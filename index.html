@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="img/logo.svg">
+  <title>Skill Safari | Rock, Paper, Scissors</title>
+
+</head>
+
+<body>
+
+  <h1>Rock, Paper, Scissors GAME </h1>
+
+  <div class="game">
+    <img id="myImg" style="align-items: center; margin-left: 760px;" src="img/image-rules.svg" alt="The Pulpit Rock"
+      width="304" height="228">
+    <script>
+      var i = 0;
+      // User choice
+      var userChoice = prompt("Hare krishna Let's play choose rock, paper or scissors?");
+
+      if (!userChoice) {
+        // User choice was undefined
+        document.write("<p>YOU, you cheated! Refresh this screen and fight like a man.</p>");
+      } else {
+        // Display user choice
+        document.write("<p>You:" + " " + userChoice + "</p>");
+      }
+
+      // Computer choice
+      var computerChoice = Math.random();
+      if (computerChoice < 0.34) {
+        computerChoice = "rock";
+      } else if (computerChoice <= 0.67) {
+        computerChoice = "paper";
+      } else {
+        computerChoice = "scissors";
+      }
+
+      // Display computer choice
+      document.write("<p>Me:" + " " + computerChoice + "</p>");
+
+      // Compare user choice vs computer choice
+      var compare = function (choice1, choice2) {
+        if (choice1 === choice2) {
+          i = i;
+          return "It's same broo let's do it again .......!";
+        }
+        if (choice1 === "rock") {
+          if (choice2 === "scissors") {
+            // rock wins
+             
+
+            i = i + 1;
+            return " Hey....You won!!!!";
+          } else {
+            // paper wins
+            i = i - 1;
+            return "You lost....! Try again.";
+          }
+        }
+        if (choice1 === "paper") {
+          if (choice2 === "rock") {
+            // paper wins
+            i = i + 1;
+            return "Hey....You won!!!!";
+          } else {
+            // scissors wins
+            i = i - 1;
+            return "You lost......! Try again.";
+          }
+        }
+        if (choice1 === "scissors") {
+          if (choice2 === "rock") {
+            // rock wins
+            i = i - 1;
+            return "You lost.......! Try again.";
+          } else {
+            // scissors wins
+            i = i + 1;
+            return "Hey....You won!!!!";
+          }
+        }
+      };
+
+      // Run the compare function
+      var results = compare(userChoice, computerChoice);
+      // var score = i;
+
+      // Display results
+      document.write("<br><hr><br>" + results);
+      document.write("<br><br><hr><br>Your Score " + i);
+    </script>
+
+  </div>
+
+</body>
+
+</html>
